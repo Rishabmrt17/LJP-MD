@@ -47,7 +47,7 @@ def run_md(N_atoms, r, forces, T, m, size, step, delta_step, dt):
     
     # close trajectory file
     file.close()
-
+    return(file)
 
 # In[5904]:
 
