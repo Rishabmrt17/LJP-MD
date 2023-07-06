@@ -37,10 +37,10 @@ def run_md(N_atoms, r, forces, T, m, size, step, delta_step, dt):
     for steps in range(step):
     
         # Propagate Positions
-        update_positions(positions, velocities, f, dt, size)
+        update_positions(positions, velocities, forces, dt, size)
         
         # Propagate Velocities
-        update_velocities(velocities, f, dt)
+        update_velocities(velocities, forces, dt)
         
         if (step%delta_step==0):
             write_trajectory_frame(positions, file, step)
@@ -201,7 +201,7 @@ def update_velocities(velocities, forces, dt):
 
 
 dt = 0.01
-velocities += f * dt
+velocities += forces * dt
 print(velocities)
 
 
