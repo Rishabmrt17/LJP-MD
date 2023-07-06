@@ -256,7 +256,7 @@ print(file)
 
 # In[5922]:
 
-
+open('traj_MD.xyz', 'w')
 def compute_radial_distribution(positions, size, N_atoms, num_bins):
     """Compute the radial distribution function (g(r)) for a given set of coordinates."""
     rdf = np.zeros(num_bins)
