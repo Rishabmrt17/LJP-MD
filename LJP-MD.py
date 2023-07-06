@@ -106,18 +106,6 @@ forces = -24 * epsilon * (2 * r12 - r6) / r
 print(forces)
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
 # In[5909]:
 
 
@@ -266,18 +254,6 @@ print(sim)
 print(file)
 
 
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
 # In[5922]:
 
 
@@ -316,15 +292,12 @@ def compute_radial_distribution(positions, size, N_atoms, num_bins):
 
 # Simulation parameters
 N_atoms = 2
-densities = [0.002]
 num_bins = 100
 size = 10
 
-# Perform simulations for different densities
-for density in densities:
-    rdf = compute_radial_distribution(positions, size, N_atoms, num_bins)
+rdf = compute_radial_distribution(positions, size, N_atoms, num_bins)
     
-    r = np.linspace(0, size / 2, num_bins)
+r = np.linspace(0, size / 2, num_bins)
 
 
 # In[5928]:
@@ -344,50 +317,6 @@ print(r)
 
 plt.plot(r,rdf)
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[1090]:
-
-
-
-
-
-# In[1091]:
-
-
-
-
-
-# In[ ]:
 
 
 
